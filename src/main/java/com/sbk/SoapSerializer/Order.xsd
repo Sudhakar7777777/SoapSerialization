@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://sbk.com/v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <!-- XML Schema Generated from XML Document on Wed Aug 08 2018 23:58:56 GMT-0700 (Pacific Daylight Time) -->
+    <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+    <xs:element name="order">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"></xs:element>
+                <xs:element name="value" type="xs:int"></xs:element>
+                <xs:element name="payment_method" type="xs:string"></xs:element>
+                <xs:element name="customer">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" maxOccurs="unbounded" type="xs:string">
+                                <xs:complexType>
+                                    <xs:attribute name="part" type="xs:string"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="address">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="street" maxOccurs="unbounded" type="xs:string">
+                                            <xs:complexType>
+                                                <xs:attribute name="line" type="xs:int"></xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="city" type="xs:string"></xs:element>
+                                        <xs:element name="postalcode" type="xs:int"></xs:element>
+                                        <xs:element name="country" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

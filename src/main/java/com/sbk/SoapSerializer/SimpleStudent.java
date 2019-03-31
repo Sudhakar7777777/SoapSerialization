@@ -1,6 +1,6 @@
 package com.sbk.SoapSerializer;
 
-public class Student
+public class SimpleStudent
 {
     private int id;
     private String firstName;
@@ -8,7 +8,7 @@ public class Student
     private int age;
     private int year;
 
-    public Student(int id, String firstName, String lastName, int age, int year)
+    public SimpleStudent(int id, String firstName, String lastName, int age, int year)
     {
         this.id = id;
         this.firstName = firstName;
@@ -17,7 +17,7 @@ public class Student
         this.year = year;
     }
 
-    public Student()
+    public SimpleStudent()
     {
         this.id = 1;
         this.firstName = "Hello";
@@ -79,7 +79,7 @@ public class Student
     @Override
     public String toString()
     {
-        return "Student{" +
+        return "SimpleStudent{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
